@@ -7,7 +7,7 @@ const Tutorial = () => {
       <br />
       <br />
 
-      <span>Quick notes:</span>
+      <h2>Quick notes:</h2>
       <br />
       <span>- You can add multiple rows at once.</span>
       <span>
@@ -20,12 +20,23 @@ const Tutorial = () => {
       <br />
       <span>- You can type the corresponding letter for the sleep type.</span>
       <br />
-      <span>- Edit functionality coming soon... or something</span>
-      <br />
       <span>- Dates are completely optional and have no function.</span>
       <span>
         You can use it to reference which sleep session the row belongs to.
       </span>
+
+      <br />
+      <br />
+
+      <h2>TODO:</h2>
+      <br />
+      <span>- I gotta add a delete all button</span>
+      <span>
+        - I also gotta add a way to save and import data in case you wanna
+        switch devices
+      </span>
+      <br />
+      <span>- Edit functionality coming soon... or something</span>
     </div>
   );
 };
