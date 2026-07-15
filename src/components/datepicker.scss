@@ -1,0 +1,30 @@
+/* input box */
+.react-datepicker__input-container input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    margin-top:5px;
+}
+
+/* calendar popup */
+.react-datepicker {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* selected day */
+.react-datepicker__day--selected {
+    background-color: #1c52c7;
+}
+
+.react-datepicker__tab-loop {
+    position: absolute;
+    top: 0;
+}
+    
+.react-datepicker__triangle {
+    display: none !important;
+}
