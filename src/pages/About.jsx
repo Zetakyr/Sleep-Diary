@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
 const About = () => {
   return (
@@ -13,15 +14,28 @@ const About = () => {
       <br />
 
       <br />
-      <h2>
-        <a
-          href={
-            "https://docs.google.com/spreadsheets/d/1VhohaRGCfZuQKw4m-cq8hcRk7F8ZqRMo4eOFyjZAe1E/edit?usp=sharing"
-          }
+      <a
+        href={
+          "https://docs.google.com/spreadsheets/d/1VhohaRGCfZuQKw4m-cq8hcRk7F8ZqRMo4eOFyjZAe1E/edit?usp=sharing"
+        }
+        target="_blank"
+      >
+        <span>---Link to original sheet---</span>
+      </a>
+
+      <br />
+
+      <br />
+
+      <button className="button">
+        <Link
+          to="/diary"
+          activeclassname="active"
+          style={{ textDecoration: "none", color: "white" }}
         >
-          <h2>---Link to original sheet---</h2>
-        </a>
-      </h2>
+          To the Sleep Diary
+        </Link>
+      </button>
     </div>
   );
 };
