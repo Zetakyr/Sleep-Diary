@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { removeRow } from "../redux/sleepData";
 
 const ProcessedData = () => {
-  const data = useSelector((state) => state?.sleepData?.userData);
+  const rawData = useSelector((state) => state?.sleepData?.userData);
   const dispatch = useDispatch();
 
   const WINDOW_SIZE = 30;
@@ -21,6 +21,8 @@ const ProcessedData = () => {
     deviance:
       row.deviance === "" || row.deviance == null ? null : Number(row.deviance),
   });
+
+  const data = rawData.map(normalizeRow);
 
   const calculateRollingAverage = (window) => {
     if (window.length === 0)
@@ -66,6 +68,7 @@ const ProcessedData = () => {
 
   const calculatedRows = data.map((rawRow, index) => {
     const row = normalizeRow(rawRow);
+    console.log(row);
 
     const window = getWindow(data, index);
 
