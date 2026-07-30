@@ -13,6 +13,15 @@ const ProcessedData = () => {
     return data.slice(startIndex + 1, startIndex + WINDOW_SIZE + 1);
   };
 
+  const normalizeRow = (row) => ({
+    ...row,
+    dozing: Number(row.dozing) || 0,
+    snoozing: Number(row.snoozing) || 0,
+    slumbering: Number(row.slumbering) || 0,
+    deviance:
+      row.deviance === "" || row.deviance == null ? null : Number(row.deviance),
+  });
+
   const calculateRollingAverage = (window) => {
     if (window.length === 0)
       return {
@@ -55,7 +64,9 @@ const ProcessedData = () => {
     };
   };
 
-  const calculatedRows = data.map((row, index) => {
+  const calculatedRows = data.map((rawRow, index) => {
+    const row = normalizeRow(rawRow);
+
     const window = getWindow(data, index);
 
     let rollingAverages = calculateRow(window);
