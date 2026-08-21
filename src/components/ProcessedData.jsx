@@ -68,7 +68,6 @@ const ProcessedData = () => {
 
   const calculatedRows = data.map((rawRow, index) => {
     const row = normalizeRow(rawRow);
-    console.log(row);
 
     const window = getWindow(data, index);
 

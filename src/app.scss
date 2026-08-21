@@ -126,6 +126,11 @@ a {
     align-items: center;
 }
 
+.react-datepicker__input-container input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
 .dateCell {
     min-width: 0;
     overflow: hidden;
@@ -175,6 +180,31 @@ button:focus {
 
 .deleteButton:hover {
     background-color: rgb(128, 38, 38);
+}
+
+.importButton {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.importButton:hover {
+    background-color: #0053ac;
+}
+
+.exportButton {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+
+.exportButton:hover {
+    background-color: #176e2c;
 }
 
 .processedData {
